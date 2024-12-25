@@ -1,0 +1,69 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        .nav {
+		height: 50px;/* 高度是 50*/
+		border-top: 3px solid #FF8500;  /*上边框是 3像素*/
+		border-bottom: 1px solid #EDEEF0; /*下边框是 1像素*/
+		background-color: #FCFCFC; /*背景颜色*/
+	    }
+
+        .nav a {   /*鼠标正常时候的样子*/
+            height: 50px;
+            line-height: 50px;
+            /*background-color: pink;*/
+            display: inline-block; /*转换*/
+            color: #4c4c4c;
+            text-decoration: none;
+            /*padding-left: 18px;
+            padding-right: 18px;*/
+            padding: 0 18px;
+            font-size: 14px;
+
+        }
+
+        .nav a:hover {
+            background-color: #edeef0;
+            color: #ff8400;
+        }

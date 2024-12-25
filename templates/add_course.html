@@ -1,0 +1,26 @@
+{%  extends 'base.html'  %}
+{% block title %}
+添加课程
+{% endblock %}
+{% block body %}
+    <nav class="nav nav-pills flex-column flex-sm-row">
+          <a class="flex-sm-fill text-sm-center nav-link " href="{{ url_for('index') }}">可选课程</a>
+          <a class="flex-sm-fill text-sm-center nav-link" href="{{ url_for('selected_courses', user_id=user_id) }}">已选课程</a>
+          <a class="flex-sm-fill text-sm-center nav-link active" href="{{ url_for('add_course')}}">添加课程</a>
+          <a class="flex-sm-fill text-sm-center nav-link" href="#">扩展内容</a>
+    </nav>
+
+    <form  method="post">
+          <h1><span class="badge badge-secondary">New</span>添加课程 </h1>
+          <div class="form-group">
+            <label for="InputCourseName">课程名称</label>
+            <input type="text" class="form-control" id="course_name" name="course_name">
+          </div>
+          <button type="submit" class="btn btn-primary">提交</button>
+    </form>
+
+
+
+
+    
+{% endblock %}

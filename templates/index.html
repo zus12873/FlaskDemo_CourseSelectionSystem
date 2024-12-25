@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+可选课程
+{% endblock %}
+{% block body %}
+
+
+        <nav class="nav nav-pills flex-column flex-sm-row">
+          <a class="flex-sm-fill text-sm-center nav-link active" href="{{ url_for('index') }}">可选课程</a>
+          <a class="flex-sm-fill text-sm-center nav-link " href="{{ url_for('selected_courses', user_id=user_id) }}">已选课程</a>
+          <a class="flex-sm-fill text-sm-center nav-link" href="{{ url_for('add_course')}}">添加课程</a>
+          <a class="flex-sm-fill text-sm-center nav-link" href="#">扩展内容</a>
+        </nav>
+
+
+
+    <ul>
+        {% if courses ==  [] %}
+            <div class="alert alert-primary" role="alert">
+              暂无可选课程
+            </div>
+        {% else %}
+            {% for course in courses %}
+                <li>
+                    {{ course.name }}
+                    <a href="{{ url_for('select_course', course_id=course.id) }}">选择</a>
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+{% endblock %}
